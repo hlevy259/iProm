@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Profile.h"
+#import "UserTabViewController.h"
 
 @interface ProfileViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *name;
+
+@property Profile *userProfile;
 
 @end

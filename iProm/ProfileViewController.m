@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UserTabViewController *parent = self.parentViewController;
+    self.userProfile = parent.userProfile;
+    NSString *nameTemp = self.userProfile.firstName;
+    self.name.text = [nameTemp stringByAppendingString:self.userProfile.lastName];
 }
 
 - (void)didReceiveMemoryWarning

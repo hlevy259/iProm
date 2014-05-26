@@ -29,4 +29,6 @@
 -(void)addInterest:(NSString*)interest;
 -(void)removeInterest:(NSUInteger)index;
 
+-(id)initWithFirstName:(NSString*)first andLastName:(NSString*)last andSchool:(NSString*)theSchool andGrade:(NSString*)theGrade andInterests:(NSMutableArray*)theInterests andUserImage:(UIImage*)picture;
+
 @end

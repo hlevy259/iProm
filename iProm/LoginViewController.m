@@ -80,11 +80,17 @@
     
     BOOL connection = YES;//used to see if a connection has been established
     
+    //testing purposes REMOVE when connection business is complete
+    Profile *prof = [[Profile alloc] initWithFirstName:@"Daniel" andLastName:@"Smith" andSchool:@"LFHS" andGrade:@"Junior" andInterests:nil andUserImage:nil];
+    self.profile = prof;
+    
+    
     if(connection)//move on to next storyboard
     {
         
         UserTabViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TabView"];
         NVC.userProfile = self.profile;
+        NVC.temp = @"hello";
         [self presentViewController:NVC animated:YES completion:nil];
     } else
     {
