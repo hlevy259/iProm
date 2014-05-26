@@ -11,9 +11,12 @@
 
 @interface SignUpViewController ()
 
+
 @end
 
 @implementation SignUpViewController
+
+@synthesize password, username, first, last, gradeChoice, create, grades, gradeButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,6 +51,7 @@
     [super viewDidLoad];
     
     self.gradeChoice.hidden = YES;
+    self.password.secureTextEntry = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,12 +116,12 @@
     BOOL connection = [self attemptCreateAccountWithFirst:self.first.text andLast:self.last.text andUsername:self.username.text andPassword:self.password.text andGrade:self.gradeButton.titleLabel.text];
     if(connection)
     {/*
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Account Created!"
-                                                        message:@"Your acount has been successfully created!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];*/
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Account Created!"
+      message:@"Your acount has been successfully created!"
+      delegate:nil
+      cancelButtonTitle:@"OK"
+      otherButtonTitles:nil];
+      [alert show];*/
         LoginViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
         [self presentViewController:NVC animated:YES completion:nil];
     } else

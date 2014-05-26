@@ -23,11 +23,11 @@
     if (self) {
         // Custom initialization
         /*
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                              action:@selector(dismissKeyboard)];
-        [self.view addGestureRecognizer:tap];
-        tap.cancelsTouchesInView = NO;
-        tap.enabled = NO;*/
+         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+         action:@selector(dismissKeyboard)];
+         [self.view addGestureRecognizer:tap];
+         tap.cancelsTouchesInView = NO;
+         tap.enabled = NO;*/
     }
     NSLog(@"LoginViewController initialized");
     return self;
@@ -70,7 +70,7 @@
 
 
 /*
-    Method called whe login button called. Connects to server and attempts to gain user information, if username/password does not match, clear textfields
+ Method called whe login button called. Connects to server and attempts to gain user information, if username/password does not match, clear textfields
  */
 - (IBAction)login:(id)sender {
     NSString *user = self.username.text;
@@ -82,9 +82,10 @@
     
     if(connection)//move on to next storyboard
     {
-        UserTabViewController *next = [[UserTabViewController alloc] initWithNibName:nil bundle:nil];
-        next.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentViewController:next animated:YES completion:nil];
+        
+        UserTabViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TabView"];
+        NVC.userProfile = self.profile;
+        [self presentViewController:NVC animated:YES completion:nil];
     } else
     {
         self.username.text = @"";
