@@ -27,6 +27,7 @@
 		07900F8A191FF11F0005FA99 /* UserTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07900F89191FF11F0005FA99 /* UserTabViewController.m */; };
 		07900F91191FF6BF0005FA99 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07900F90191FF6BF0005FA99 /* ProfileViewController.m */; };
 		07900F94191FF74D0005FA99 /* BrowsePromDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07900F93191FF74D0005FA99 /* BrowsePromDatesViewController.m */; };
+		07BD0CA31934134D0007222B /* empty_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07BD0CA21934134D0007222B /* empty_profile.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		07900F90191FF6BF0005FA99 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		07900F92191FF74D0005FA99 /* BrowsePromDatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsePromDatesViewController.h; sourceTree = "<group>"; };
 		07900F93191FF74D0005FA99 /* BrowsePromDatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsePromDatesViewController.m; sourceTree = "<group>"; };
+		07BD0CA21934134D0007222B /* empty_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = empty_profile.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		07900F50191D0A070005FA99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07BD0CA21934134D0007222B /* empty_profile.jpg */,
 				07900F51191D0A070005FA99 /* iProm-Info.plist */,
 				07900F52191D0A070005FA99 /* InfoPlist.strings */,
 				07900F55191D0A070005FA99 /* main.m */,
@@ -270,6 +273,7 @@
 				07900F62191D0A070005FA99 /* Images.xcassets in Resources */,
 				07900F54191D0A070005FA99 /* InfoPlist.strings in Resources */,
 				07900F5D191D0A070005FA99 /* Main.storyboard in Resources */,
+				07BD0CA31934134D0007222B /* empty_profile.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

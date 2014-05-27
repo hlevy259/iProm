@@ -13,7 +13,7 @@
 //synthesize getters and setters for instance variables
 @synthesize firstName, lastName, school, grade, interests, userImage;
 
--(id)initWithFirstName:(NSString*)first andLastName:(NSString*)last andSchool:(NSString*)theSchool andGrade:(NSString*)theGrade andInterests:(NSMutableArray*)theInterests andUserImage:(UIImage*)picture
+-(id)initWithFirstName:(NSString*)first andLastName:(NSString*)last andSchool:(NSString*)theSchool andGrade:(NSString*)theGrade andInterests:(NSString*)theInterests andUserImage:(UIImage*)picture
 {
     self = [super init];
     if(self)
@@ -33,16 +33,6 @@
 {
     self.firstName = first;
     self.lastName = last;
-}
-
--(void)addInterest:(NSString*)interest
-{
-    [interests addObject:interest];
-}
-
--(void)removeInterest:(NSUInteger)index
-{
-    [interests removeObjectAtIndex:index];
 }
 
 @end

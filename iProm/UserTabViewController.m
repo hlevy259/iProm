@@ -14,7 +14,7 @@
 
 @implementation UserTabViewController
 
-@synthesize userProfile, temp;
+@synthesize userProfile;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,12 +30,6 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        NSLog(self.userProfile.firstName);
-        NSLog(@"isuahdf");
-        NSLog(self.temp);
-        self.temp = @"what";
-        NSLog(self.temp);
-        if(self.userProfile==nil)NSLog(@"help");
     }
     return self;
 }

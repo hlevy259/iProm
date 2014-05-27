@@ -82,6 +82,7 @@
     
     //testing purposes REMOVE when connection business is complete
     Profile *prof = [[Profile alloc] initWithFirstName:@"Daniel" andLastName:@"Smith" andSchool:@"LFHS" andGrade:@"Junior" andInterests:nil andUserImage:nil];
+   // NSLog(prof.firstName);
     self.profile = prof;
     
     
@@ -90,7 +91,6 @@
         
         UserTabViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TabView"];
         NVC.userProfile = self.profile;
-        NVC.temp = @"hello";
         [self presentViewController:NVC animated:YES completion:nil];
     } else
     {

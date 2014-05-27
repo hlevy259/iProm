@@ -13,6 +13,5 @@
 @interface UserTabViewController : UITabBarController
 
 @property (strong, nonatomic) Profile *userProfile;
-@property (strong, nonatomic) NSString *temp;
 
 @end
