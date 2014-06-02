@@ -7,12 +7,26 @@
 //
 
 #import "HLDSAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation HLDSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Parse setApplicationId:@"K9X5UKPQmuSGBC6eromsNQJoO2a5Z0TJUI29oxId" clientKey:@"rNk0VxjqikHBV1nkbHXTRvPNFZYK85drkqjO0Dsn"];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Player"]; //1
+    [query whereKey:@"Name" equalTo:@"John"];//2
+    [query whereKey:@"Score" greaterThan:[NSNumber numberWithInt:1000]]; //3
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {//4
+        if (!error) {
+            NSLog(@"Successfully retrieved: %@", objects);
+        } else {
+            NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            NSLog(@"Error: %@", errorString);
+        }
+    }];
+    
     return YES;
 }
 							

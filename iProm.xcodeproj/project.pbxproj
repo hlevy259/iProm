@@ -27,6 +27,8 @@
 		07900F8A191FF11F0005FA99 /* UserTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07900F89191FF11F0005FA99 /* UserTabViewController.m */; };
 		07900F91191FF6BF0005FA99 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07900F90191FF6BF0005FA99 /* ProfileViewController.m */; };
 		07900F94191FF74D0005FA99 /* BrowsePromDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07900F93191FF74D0005FA99 /* BrowsePromDatesViewController.m */; };
+		1D327846193CC420006F682F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D327845193CC420006F682F /* Parse.framework */; };
+		1D327848193CC46E006F682F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D327847193CC46E006F682F /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		07900F90191FF6BF0005FA99 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		07900F92191FF74D0005FA99 /* BrowsePromDatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsePromDatesViewController.h; sourceTree = "<group>"; };
 		07900F93191FF74D0005FA99 /* BrowsePromDatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsePromDatesViewController.m; sourceTree = "<group>"; };
+		1D327845193CC420006F682F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		1D327847193CC46E006F682F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D327848193CC46E006F682F /* Accounts.framework in Frameworks */,
 				07900F4C191D0A070005FA99 /* CoreGraphics.framework in Frameworks */,
 				07900F4E191D0A070005FA99 /* UIKit.framework in Frameworks */,
+				1D327846193CC420006F682F /* Parse.framework in Frameworks */,
 				07900F4A191D0A070005FA99 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +125,8 @@
 		07900F48191D0A070005FA99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D327847193CC46E006F682F /* Accounts.framework */,
+				1D327845193CC420006F682F /* Parse.framework */,
 				07900F49191D0A070005FA99 /* Foundation.framework */,
 				07900F4B191D0A070005FA99 /* CoreGraphics.framework */,
 				07900F4D191D0A070005FA99 /* UIKit.framework */,
@@ -421,6 +429,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iProm/iProm-Prefix.pch";
 				INFOPLIST_FILE = "iProm/iProm-Info.plist";
@@ -434,6 +446,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iProm/iProm-Prefix.pch";
 				INFOPLIST_FILE = "iProm/iProm-Info.plist";
@@ -501,6 +517,7 @@
 				07900F7A191D0A070005FA99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07900F7B191D0A070005FA99 /* Build configuration list for PBXNativeTarget "iPromTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +526,7 @@
 				07900F7D191D0A070005FA99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

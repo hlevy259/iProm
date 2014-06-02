@@ -8,6 +8,7 @@
 
 #import "SignUpViewController.h"
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
 
 @interface SignUpViewController ()
 
@@ -113,27 +114,22 @@
 
 //access server and attempt to create account with given credentials. If success, move on to new view else, stay on page
 - (IBAction)createAccount:(id)sender {
-    BOOL connection = [self attemptCreateAccountWithFirst:self.first.text andLast:self.last.text andUsername:self.username.text andPassword:self.password.text andGrade:self.gradeButton.titleLabel.text];
-    if(connection)
-    {/*
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Account Created!"
-      message:@"Your acount has been successfully created!"
-      delegate:nil
-      cancelButtonTitle:@"OK"
-      otherButtonTitles:nil];
-      [alert show];*/
-        LoginViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
-        [self presentViewController:NVC animated:YES completion:nil];
-    } else
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Creation Failed!"
-                                                        message:@"For some reason we could not create your account! Please try again!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [self clearAllFields];
-    }
+    PFObject *user = [PFObject objectWithClassName:@"User"];
+    user[@"username"] = self.username.text;
+    user[@"password"] = self.password.text;
+    user[@"first"] = self.first.text;
+    user[@"last"] = self.last.text;
+    user[@"grade"] = self.gradeButton.titleLabel.text;
+    
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // Hooray! Let them use the app now.
+        } else {
+            NSString *errorString = [error userInfo][@"error"];
+            [self clearAllFields];
+            // Show the errorString somewhere and let the user try again.
+        }
+    }];
 }
 
 #pragma mark - Connection to Server

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "UserTabViewController.h"
+#import <Parse/Parse.h>
 
 @interface LoginViewController ()
 
@@ -73,23 +74,26 @@
  Method called whe login button called. Connects to server and attempts to gain user information, if username/password does not match, clear textfields
  */
 - (IBAction)login:(id)sender {
-    NSString *user = self.username.text;
-    NSString *pass = self.password.text;
-    
-    //Attempt connection here....
-    
-    BOOL connection = YES;//used to see if a connection has been established
-    
-    if(connection)//move on to next storyboard
-    {
-        
-        UserTabViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TabView"];
-        NVC.userProfile = self.profile;
-        [self presentViewController:NVC animated:YES completion:nil];
-    } else
-    {
-        self.username.text = @"";
-        self.password.text = @"";
-    }
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query whereKey:@"username" equalTo:self.username.text];
+    [query whereKey:@"password" equalTo:self.password.text];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                /*
+                 *********************************************************
+                 found user in database....
+                 TODO: do something with user found
+                 */
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
+
 @end
