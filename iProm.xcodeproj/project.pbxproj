@@ -159,6 +159,7 @@
 		07900F50191D0A070005FA99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07BD0CA21934134D0007222B /* empty_profile.jpg */,
 				07900F51191D0A070005FA99 /* iProm-Info.plist */,
 				07900F52191D0A070005FA99 /* InfoPlist.strings */,
 				07900F55191D0A070005FA99 /* main.m */,
@@ -188,8 +189,8 @@
 		07900F8B191FF1D50005FA99 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				07900F89191FF11F0005FA99 /* UserTabViewController.m */,
 				07900F88191FF11F0005FA99 /* UserTabViewController.h */,
+				07900F89191FF11F0005FA99 /* UserTabViewController.m */,
 				07900F8F191FF6BF0005FA99 /* ProfileViewController.h */,
 				07900F90191FF6BF0005FA99 /* ProfileViewController.m */,
 				07900F92191FF74D0005FA99 /* BrowsePromDatesViewController.h */,
@@ -278,6 +279,7 @@
 				07900F62191D0A070005FA99 /* Images.xcassets in Resources */,
 				07900F54191D0A070005FA99 /* InfoPlist.strings in Resources */,
 				07900F5D191D0A070005FA99 /* Main.storyboard in Resources */,
+				07BD0CA31934134D0007222B /* empty_profile.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

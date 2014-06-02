@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Profile.h"
+#import "ProfileViewController.h"
 
 @interface UserTabViewController : UITabBarController
 
-@property Profile *userProfile;
+@property (strong, nonatomic) Profile *userProfile;
 
 @end

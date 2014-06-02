@@ -260,7 +260,7 @@
             </objects>
             <point key="canvasLocation" x="1363" y="225"/>
         </scene>
-        <!--Browse Prom Dates View Controller - Item-->
+        <!--Browse Prom Dates View Controller - Browse-->
         <scene sceneID="3Xl-cV-Z6b">
             <objects>
                 <viewController id="6aR-Jb-Zy1" customClass="BrowsePromDatesViewController" sceneMemberID="viewController">
@@ -273,13 +273,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zPx-fk-w6G"/>
+                    <tabBarItem key="tabBarItem" title="Browse" id="zPx-fk-w6G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7K4-Oc-05h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1912" y="676"/>
         </scene>
-        <!--Profile View Controller - Item-->
+        <!--Profile View Controller - Profile-->
         <scene sceneID="WQr-Yy-vZf">
             <objects>
                 <viewController id="cQd-MU-qBI" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -292,19 +292,95 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNr-T6-aHY">
-                                <rect key="frame" x="159" y="59" width="122" height="146"/>
+                                <rect key="frame" x="43" y="20" width="233" height="225"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-VP-iba">
-                                <rect key="frame" x="30" y="84" width="96" height="28"/>
+                                <rect key="frame" x="30" y="253" width="251" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CR3-iX-Wmb">
+                                <rect key="frame" x="30" y="299" width="246" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EditAge" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="03e-Pv-q4M">
+                                <rect key="frame" x="30" y="296" width="246" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIGHSCHOOL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPK-6Z-zQr">
+                                <rect key="frame" x="30" y="341" width="251" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INTERESTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzm-Em-Zw4">
+                                <rect key="frame" x="30" y="370" width="251" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7v-VD-8ij">
+                                <rect key="frame" x="127" y="479" width="56" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="cQd-MU-qBI" eventType="touchUpInside" id="UQX-Sg-yFO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EditName" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIB-kL-2ZI">
+                                <rect key="frame" x="30" y="252" width="246" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EditSchool" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tkf-Vo-w15">
+                                <rect key="frame" x="30" y="337" width="246" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwc-nj-53i">
+                                <rect key="frame" x="50" y="20" width="226" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit Profile Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editProfilePicture:" destination="cQd-MU-qBI" eventType="touchUpInside" id="zdh-Um-qWh"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="EditInterests" translatesAutoresizingMaskIntoConstraints="NO" id="FDa-Ft-5p7">
+                                <rect key="frame" x="30" y="375" width="246" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="izP-qv-jcM"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="izP-qv-jcM"/>
+                    <connections>
+                        <outlet property="age" destination="CR3-iX-Wmb" id="ye0-cp-OR4"/>
+                        <outlet property="editAge" destination="03e-Pv-q4M" id="I1p-BI-vyK"/>
+                        <outlet property="editInterests" destination="FDa-Ft-5p7" id="le6-ON-xop"/>
+                        <outlet property="editName" destination="eIB-kL-2ZI" id="aUl-Na-zo6"/>
+                        <outlet property="editProPic" destination="Zwc-nj-53i" id="CnA-CJ-Grc"/>
+                        <outlet property="editSchool" destination="tkf-Vo-w15" id="MtX-cS-Aew"/>
+                        <outlet property="interests" destination="gzm-Em-Zw4" id="e34-hF-Csm"/>
+                        <outlet property="name" destination="ePj-VP-iba" id="AC7-H9-Kwx"/>
+                        <outlet property="picture" destination="LNr-T6-aHY" id="1QC-ac-Gct"/>
+                        <outlet property="school" destination="nPK-6Z-zQr" id="0iV-cS-g0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6i-9c-dmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
